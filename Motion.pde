@@ -10,7 +10,7 @@ void setup() {
 
   // Actually make an instance of a Mover
   for (int i = 0; i < movers.length; i+=1) {
-    movers[i] = new Mover();
+    movers[i] = new Mover(); 
   }
   
 }
