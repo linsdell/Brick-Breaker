@@ -1,5 +1,9 @@
 // Create a space in memory for many Mover objects
 Mover movers[] = new Mover[25];
+Brick bricks[] = new Brick[10];
+
+float hor[] = {30, 160, 290, 420, 550};
+float ver[] = {30, 60};
 
 // Runs once
 void setup() {
@@ -12,6 +16,12 @@ void setup() {
   for (int i = 0; i < movers.length; i+=1) {
     movers[i] = new Mover(); 
   }
+  for (int i = 0; i < bricks.length; i+=1) {
+    for(int j = 0; j < hor.length; j++){
+    bricks[i] = new Brick(); 
+  }
+  }
+  
   
 }
 
@@ -27,4 +37,6 @@ void draw() {
     movers[i].checkEdges();
     movers[i].display();
   }
+  
+  brick.create();
 }
