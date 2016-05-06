@@ -16,11 +16,14 @@ void setup() {
   for (int i = 0; i < movers.length; i+=1) {
     movers[i] = new Mover(); 
   }
-  for (int i = 0; i < bricks.length; i+=1) {
+  
     for(int j = 0; j < hor.length; j++){
-    bricks[i] = new Brick(); 
+      for(int k = 0; k < ver.length; k++){
+        for (int i = 0; i < bricks.length; i+=1) {
+          bricks[i] = new Brick(hor[j],ver[k]); 
   }
   }
+}
   
   
 }
@@ -37,6 +40,7 @@ void draw() {
     movers[i].checkEdges();
     movers[i].display();
   }
-  
-  brick.create();
+  for (int i = 0; i < bricks.length; i+=1) {
+    bricks[i].create();
+  }
 }
