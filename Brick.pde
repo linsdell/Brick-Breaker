@@ -1,7 +1,7 @@
 class Brick{
 
-    float Bwidth = 100;
-    float Bheight = 15;
+    float Bwidth = 60;
+    float Bheight = 25;
     RVector corner;
 
   Brick(float x, float y){
