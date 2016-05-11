@@ -1,6 +1,7 @@
 // Create a space in memory for many Mover objects
 Mover movers[] = new Mover[25];
 Brick bricks[] = new Brick[15];
+Paddle paddle = new Paddle();
 
 float hor[] = {30, 160, 290, 420, 550};
 float ver[] = {30, 70, 110};
@@ -38,4 +39,5 @@ void draw() {
   for (int i = 0; i < bricks.length; i++) {
     bricks[i].create();
   }
+  paddle.track();
 }
